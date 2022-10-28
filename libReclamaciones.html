@@ -132,42 +132,43 @@
           <h2 class="text-center title">Libro de Reclamaciones</h2>
           <h4 class="text-center description">Estamos para ayudar, registra tus disconformidades tipos de
             insatisfacciones: quejas y reclamaciones</h4>
-          <form class="contact-form">
+          <form class="contact-form" method="post" action="http://127.0.0.1:8000/api/LibroReclamaciones" enctype="multipart/form-data">
             <div class="row">
               <div class="col-md-2">
                 <div class="form-group">
                   <label class="bmd-label-floating">DNI</label>
-                  <input type="number" class="form-control " maxlength="8" required >
+                  <input type="number" class="form-control " maxlength="8" name="respuesta1" required >
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="area">Area:</label>
-                  <select class="form-control selectpicker" data-style="btn btn-link" id="area" required>
-                    <option>Seleccionar area</option>
-                    <option>Bazar</option>
-                    <option>Consumo</option>
-                    <option>Perfumeria</option>
-                    <option>Oficinas</option>
+                  <select class="form-control selectpicker" data-style="btn btn-link" name="respuesta2" required>
+                    <!-- <option value="0">Seleccionar area</option> -->
+                    <option value="1">Bazar</option>
+                    <option value="2">Consumo</option>
+                    <option value="3">Perfumeria</option>
+                    <option value="4">Oficinas</option>
                   </select>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label class="label-control">Fecha</label>
-                  <input type="text" class="form-control datetimepicker" value="" />
+                  <input type="text" class="form-control datetimepicker"  name="respuesta3"/>
                 </div>
               </div>
             </div>
             <div class="form-group">
               <label for="exampleMessage" class="bmd-label-floating">Detalles</label>
-              <textarea type="email" class="form-control" rows="4" id="exampleMessage"></textarea>
+              <textarea type="email" class="form-control" rows="4" name="respuesta4"></textarea>
             </div>
             <div class="row">
               <div class="col-md-4 ml-auto mr-auto text-center">
-                <button class="btn btn-primary btn-raised">
+                <input type="submit" class="btn btn-primary btn-raised" value="Registrar">
+                <!-- <button class="btn btn-primary btn-raised">
                   Enviar mensaje
-                </button>
+                </button> -->
               </div>
             </div>
           </form>
