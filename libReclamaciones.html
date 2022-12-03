@@ -24,9 +24,10 @@
   <nav class="navbar navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
-        
-        <a class="navbar-brand" href="index.html"> 
-          <img src="./img/logocosemselam_Mesa de trabajo 1.png" alt="Logo" class="img-fluid" width="220" style="position: relative;"> 
+
+        <a class="navbar-brand" href="index.html">
+          <img src="./img/logocosemselam_Mesa de trabajo 1.png" alt="Logo" class="img-fluid" width="220"
+            style="position: relative;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
           aria-label="Toggle navigation">
@@ -132,9 +133,20 @@
           <h2 class="text-center title">Libro de Reclamaciones</h2>
           <h4 class="text-center description">Estamos para ayudar, registra tus disconformidades tipos de
             insatisfacciones: quejas y reclamaciones</h4>
-          <form class="contact-form" method="post" action="http://127.0.0.1:8000/api/LibroReclamaciones" enctype="multipart/form-data">
+            <br>
+          <form class="contact-form" method="post" action="http://127.0.0.1:8000/api/LibroReclamaciones"
+            enctype="multipart/form-data">
             <div class="row">
-              <div class="col-md-2">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label class="label-control">Fecha</label>
+                  <input class="form-control" type="date" name="respuesta3" />
+                </div>
+              </div>
+            </div>
+            <p class="title">IDENTIFICACIÓN DEL CONSUMIDOR RECLAMANTE</p>
+            <div class="row">
+              <!-- <div class="col-md-2">
                 <div class="form-group">
                   <label class="bmd-label-floating">DNI</label>
                   <input type="number" class="form-control " maxlength="8" name="respuesta1" required >
@@ -144,25 +156,86 @@
                 <div class="form-group">
                   <label for="area">Area:</label>
                   <select class="form-control selectpicker" data-style="btn btn-link" name="respuesta2" required>
-                    <!-- <option value="0">Seleccionar area</option> -->
                     <option value="1">Bazar</option>
                     <option value="2">Consumo</option>
                     <option value="3">Perfumeria</option>
                     <option value="4">Oficinas</option>
                   </select>
                 </div>
+              </div> -->
+
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label class="label-control">Nombre:</label>
+                  <input class="form-control" type="text" name="respuesta3" />
+                </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
-                  <label class="label-control">Fecha</label>
-                  <input  class="form-control" type="date" name="respuesta3"/>
+                  <label class="label-control">Domicilio:</label>
+                  <input class="form-control" type="text" name="respuesta3" />
                 </div>
               </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label class="label-control">DNI/CE:</label>
+                  <input class="form-control" type="text" name="respuesta3" />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label class="label-control">TELEFONO:</label>
+                  <input class="form-control" type="text" name="respuesta3" />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label class="label-control">EMAIL:</label>
+                  <input class="form-control" type="email" name="respuesta3" />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label class="label-control">PADRE O MADRE <small>(En caso de ser menor de edad)</small></label>
+                  <input class="form-control" type="email" name="respuesta3" />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="area">IDENTIFICACIÓN DEL BIEN CONTRATADO:</label>
+                  <select class="form-control selectpicker" data-style="btn btn-link" name="respuesta2" required>
+                    <option value="1">Producto</option>
+                    <option value="2">Servicio</option>
+                  </select>
+                </div>
+              </div>
+
             </div>
             <div class="form-group">
               <label for="exampleMessage" class="bmd-label-floating">Detalles</label>
               <textarea type="email" class="form-control" rows="4" name="respuesta4"></textarea>
             </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="area">DETALLE DE LA RECLAMACIÓN:</label>
+                  <select class="form-control selectpicker" data-style="btn btn-link" name="respuesta2" required>
+                    <option value="1">RECLAMO</option>
+                    <option value="2">QUEJA</option>
+                  </select>
+                </div>
+              </div>
+
+            </div>
+            <div class="form-group">
+              <label for="exampleMessage" class="bmd-label-floating">Detalles</label>
+              <textarea type="email" class="form-control" rows="4" name="respuesta4"></textarea>
+            </div>
+
             <div class="row">
               <div class="col-md-4 ml-auto mr-auto text-center">
                 <input type="submit" class="btn btn-primary btn-raised" value="Registrar">
